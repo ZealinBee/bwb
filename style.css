@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;700&family=Mohave:wght@400;500;700&family=Montserrat&family=Raleway:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.background {
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+
+.background img {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.background-overlay {
+  display: block;
+  position: absolute;
+  background: linear-gradient(0deg, #00000088 100%, #ffffff66 20%);
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+
+.logo-text {
+  font-family: "M PLUS 1", sans-serif;
+  color: white;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.bold-logo-text {
+  font-weight: 700;
+}
+
+.logo {
+  width: 40px;
+  margin-right: 0.5rem;
+}
+
+.nav-links {
+  background: white;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1, 0);
+  transition: transform 250ms ease-in-out 50ms;
+  transform-origin: top;
+  z-index: 3;
+}
+
+.nav-ul-show {
+  transform: scale(1, 1);
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-family: "M PLUS 1", sans-serif;
+}
+
+nav li {
+  list-style: none;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+.burger {
+  width: 26px;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  cursor: pointer;
+  /* transition: all 0.5s ease-in-out; */
+}
+
+.burger-hide {
+  display: none;
+}
+
+.x {
+  width: 26px;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  cursor: pointer;
+  display: none;
+  transition: all 0.2s ease-in-out;
+  z-index: 999;
+}
+
+.x-show {
+  display: block;
+}
+
+main {
+  color: white;
+  font-family: "M PLUS 1", sans-serif;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  font-size: 1.2rem;
+}
+
+main button {
+  background: rgb(83, 155, 255);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  display: flex;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  box-shadow: 2px 2px 2px black;
+}
+
+main button:hover {
+  color: black;
+}
+
+.our-creators {
+  font-size: 2rem;
+  color: rgb(83, 155, 255);
+  margin-bottom: 1rem;
+}
+
+.about {
+  font-family: "M PLUS 1", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto auto;
+
+  /* background-image: url("assets/office.jpg"); */
+}
+
+.zhiyuan,
+.larry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zhiyuan img,
+.larry img {
+  width: 60%;
+  border-radius: 50%;
+}
+
+.wrapper2 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* background-image: url("assets/office.jpg"); */
+}
+
+.zhiyuan {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 900px) {
+  nav {
+    flex-direction: row;
+  }
+  .logo {
+    width: 60px;
+  }
+  .logo-text {
+    font-size: 2.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .nav-links {
+    transform: scale(1, 1);
+    background: transparent;
+    position: relative;
+    flex-direction: row;
+    width: unset;
+    height: unset;
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+
+  .nav-links a:hover {
+    color: black;
+  }
+
+  .nav-links li:nth-child(4) {
+    background: rgb(83, 155, 255);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    display: flex;
+    align-items: center;
+    margin-left: 1.2rem;
+    box-shadow: 2px 2px 2px black;
+  }
+
+  /* .nav-links li:nth-child(4):hover {
+      box-shadow: 4px 4px 6px black;
+      transform: scale(1.1, 1.1);
+    } */
+
+  .nav-links a {
+    color: white;
+  }
+
+  main {
+    font-size: 2.2rem;
+    margin-left: 5.6rem;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer i {
+    margin: 1rem;
+  }
+
+  .footer-twitter {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
+  .footer-discord {
+    margin-bottom: 0;
+  }
+
+  .copyright i {
+    margin-right: 0.5rem;
+  }
+
+  .creators {
+    display: flex;
+    flex-direction: row;
+  }
+}
